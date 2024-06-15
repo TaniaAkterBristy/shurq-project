@@ -1,0 +1,20 @@
+.card {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+  min-width: 280px;
+  .divider {
+    margin-left: 17px;
+    margin-top: 5px;
+    height: 14px;
+    width: 1px;
+    background: #0098fd;
+    margin-right: 5px;
+  }
+  &.add-card {
+    box-shadow: none;
+    border: 1px dashed #828282;
+    // @include fonts($secondary, rem(14), $medium);
+  }
+}
+.react-select-container {
+  display: block;
+}

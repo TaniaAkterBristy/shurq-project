@@ -1,0 +1,30 @@
+@import "./modules/dashboard";
+@import "./mixins";
+@import "./variable";
+
+.sidebar {
+  width: 250px;
+  .text-gray-500 {
+    color: #dfdfdf;
+    span {
+      font-size: 22px;
+    }
+  }
+  .active {
+    background-color: #fafafa;
+    color: #063e63;
+    border-right: 2px solid #063e63;
+    span {
+      &::before {
+        color: #063e63;
+      }
+      font-size: 22px;
+    }
+  }
+  &.collapsed {
+    width: 58px;
+    .title {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./styles.css";
+@import "./icons/style.css";
+@import "react-datepicker/dist/react-datepicker.css";
+@import "../components/sidebar/sidebar.css";
+@import "../components/Button/addButton.css";
+
+@layer utilities {
+	.flag {
+		display: inline-block;
+		width: 22px;
+		height: 14px;
+		position: relative;
+		overflow: hidden;
+		background: #000 url(/flags.png);
+		background-repeat: no-repeat;
+	}
+	.flag.disabled {
+		filter: grayscale(100%);
+		opacity: 30%;
+	}
+
+	.flag.us { background-position: -60px 0}
+	.flag.ca { background-position: -30px 0}
+	.flag.mx { background-position: -120px 0}
+	.flag.br { background-position: -90px 0}
+
+	.flag.uk { background-position: -1px 0}
+	.flag.de { background-position: -30px -19px}
+	.flag.es { background-position: -210px 0}
+	.flag.fr { background-position: -270px 0}
+	.flag.it { background-position: -180px 0}
+	.flag.nl { background-position: 0 -20px}
+	.flag.pl { background-position: -150px 0}
+	.flag.se { background-position: -240px 0}
+	.flag.tr { background-position: -60px -20px}
+
+	.flag.jp { background-position: -150px -20px}
+	.flag.in { background-position: -120px -20px}
+	.flag.au { background-position: -90px -20px}
+	.flag.sg { background-position: -180px -20px}
+
+	.flag.ae { background-position: -270px -20px}
+	.flag.eg { background-position: -240px -20px}
+	.flag.sa { background-position: -210px -20px}
+
+
+
+}
+.w-238{
+	width:238px;
+}
+.border-radius-8{
+	border-radius: 8px;
+}
+.text-primary{
+	color: #0098FD;
+}
+.align-items-center{
+	align-items: center;
+}
+
+
+.react-datepicker {
+	font-size: 0.7rem !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+}
+.react-datepicker__header {
+	border-radius: 0 !important;
+	background: none !important;
+	border-color: #cbd5e1 !important;
+}
+
+
+#keywordTrackerTable {
+	@apply w-full rounded-md overflow-hidden shadow-sm;
+}
+#keywordTrackerTable > thead {
+	@apply bg-[#d4e6f1];
+}
+#keywordTrackerTable tr {
+	@apply text-xs font-normal;
+}
+#keywordTrackerTable  tr.active {
+	@apply bg-blue-50;
+}
+#keywordTrackerTable tr.subtable tbody  {
+	@apply bg-[#F1F8FF];
+}

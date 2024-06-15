@@ -1,0 +1,93 @@
+
+$base-font-size: 16px;
+$base-size: $base-font-size;
+// px to rem
+@function rem($pixels, $context: $base-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+//FONTS
+
+@mixin fonts($color, $size, $weight) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+// RESPONSIVE FONT
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+//light font
+@mixin light {
+  @include fonts($emperor, rem(10), $base-font, $medium);
+}
+// medium font
+@mixin medium {
+  @include fonts($emperor, rem(12), $base-font, $semi-bold);
+}
+//white Portion
+//label
+//label bullet
+@mixin bullet {
+  display: inline-block;
+  content: '';
+  -webkit-border-radius: rem(6);
+  border-radius: rem(6);
+  height: rem(4);
+  width: rem(4);
+  margin-bottom: rem(2);
+  margin-right: rem(8);
+  background-color:$silverLite;
+  @media (max-width:1350px) {
+    display: none;
+  }
+}
+@mixin btn-cancel {
+  margin: 0 rem(5);
+  border-radius: rem(3);
+  border:borderOuterSpace;
+  color: $outerSpace;
+}
+@mixin btn-primary {
+  border-radius: rem(3);
+  background-color: $indigo;
+  color: $white;
+  padding: rem(6) rem(25);
+}
+@mixin icon-button {
+  background-color: transparent;
+  box-shadow: none;
+  @include fonts($indigo, rem(14), $base-font, $light);
+  border-radius: rem(3);
+}

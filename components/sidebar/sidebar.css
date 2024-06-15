@@ -1,0 +1,29 @@
+/* .css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+    background-color: #181a1d !important;
+}
+.css-1l8j5k8 {
+    background-color: #181a1d !important;
+} */
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper,
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+    border: 3px solid red;
+    margin-top: 64px !important;
+}
+.css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+.css-1hsz34s-MuiDrawer-docked .css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+    display: block;
+}
+.css-p55zm9-MuiButtonBase-root-MuiIconButton-root {
+    margin-left: 0 !important;
+    margin-right: 40px !important;
+    margin-bottom: -53px !important;
+    margin-top: 12px !important;
+    color: black;
+}
+.css-p55zm9-MuiButtonBase-root-MuiIconButton-root:hover {
+    color: #063e63;
+}
